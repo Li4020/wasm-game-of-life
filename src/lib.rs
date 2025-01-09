@@ -11,3 +11,8 @@ extern "C" {
 pub fn greet() {
     alert("Hello, wasm-game-of-life!");
 }
+
+#[wasm_bindgen]
+pub fn greet_with_name(name: &str) {
+    alert(&format!("Hello, {}!", name));
+}
